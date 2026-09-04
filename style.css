@@ -271,3 +271,73 @@ header .buttons button:hover{
 #about .about-div .about-description button:hover{
     color: var(--secondary-color);
 }
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE OVERRIDES
+   ========================================== */
+@media (max-width: 768px) {
+
+  /* 1. Fix Header layout */
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 10px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 2. Fix Hero Section overflow */
+  #hero {
+    height: auto;
+    min-height: 90vh;
+    padding: 40px 15px;
+  }
+
+  #hero .hero-text {
+    width: 100% !important; /* Overrides the fixed 900px */
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  #hero .hero-text h1 {
+    font-size: 2.5rem !important; /* Overrides 90px to fit mobile screen */
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
+
+  #hero .hero-text p {
+    font-size: 1rem;
+  }
+
+  #hero .buttons button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* 3. Fix About Section alignment & overflow */
+  #about .about-div {
+    flex-direction: column; /* Stacks image and text vertically */
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  #about .about-div .about-image {
+    width: 100% !important; /* Overrides fixed 400px */
+    max-width: 350px;
+    height: 350px;
+  }
+
+  #about .about-div .about-description {
+    width: 100% !important; /* Overrides fixed 600px */
+    text-align: center;
+  }
+
+  #about .about-div .about-description h1 {
+    font-size: 2.2rem;
+  }
+}
