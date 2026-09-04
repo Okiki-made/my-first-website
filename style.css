@@ -306,12 +306,14 @@ header .buttons button:hover{
 
   #hero .hero-text h1 {
     font-size: 2.5rem !important; /* Overrides 90px to fit mobile screen */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.1;
     letter-spacing: 2px;
   }
 
   #hero .hero-text p {
     font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   #hero .buttons button {
@@ -339,5 +341,6 @@ header .buttons button:hover{
 
   #about .about-div .about-description h1 {
     font-size: 2.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 }
