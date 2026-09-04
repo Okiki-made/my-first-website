@@ -14,15 +14,15 @@
 
 @font-face {
     font-family: myfont;
-    src: url("Monda-VariableFont_wght.ttf");
+    src: url(Monda-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: myfontss;
-    src: url("MerriweatherSans-VariableFont_wght.ttf");
+    src: url(MerriweatherSans-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: fonts;
-    src: url("Roboto_Condensed-Regular.ttf");
+    src: url(Roboto_Condensed-Regular.ttf);
 }
 
 body{
@@ -274,6 +274,7 @@ header .buttons button:hover{
 
 
 
+
 /* ==========================================
    MOBILE RESPONSIVE OVERRIDES
    ========================================== */
@@ -289,9 +290,6 @@ header .buttons button:hover{
   header nav ul {
     flex-wrap: wrap;
     justify-content: center;
-  }
-  header .logo h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   /* 2. Fix Hero Section overflow */
@@ -309,14 +307,12 @@ header .buttons button:hover{
 
   #hero .hero-text h1 {
     font-size: 2.5rem !important; /* Overrides 90px to fit mobile screen */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.1;
     letter-spacing: 2px;
   }
 
   #hero .hero-text p {
     font-size: 1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   #hero .buttons button {
@@ -344,6 +340,5 @@ header .buttons button:hover{
 
   #about .about-div .about-description h1 {
     font-size: 2.2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 }
