@@ -12,18 +12,7 @@
     --light-blue-colr: #bb91ff;
 }
 
-@font-face {
-    font-family: myfont;
-    src: url(Monda-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: myfontss;
-    src: url(MerriweatherSans-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: fonts;
-    src: url(Roboto_Condensed-Regular.ttf);
-}
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;
