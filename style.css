@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #1b004e;
+    --secondary-color: #ffffff;
+    --gray-color: #c7c7c7;
+    --dark-gray-color: #6b6b6b;
+    --light-blue-colr: #bb91ff;
+}
+
+@font-face {
+    font-family: myfont;
+    src: url(Monda-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: myfontss;
+    src: url(MerriweatherSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: fonts;
+    src: url(Roboto_Condensed-Regular.ttf);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    z-index: 100000000;
+}
+header .logo{
+    font-family: fantasy;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+header nav ul li a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+    transition: 0.5;
+    z-index: 100;
+}
+header nav ul li{
+    position: relative;
+}
+header nav ul li ul{
+    position: absolute;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    display: none;
+    z-index: 1000000000;
+}
+header nav ul li ul li{
+    text-wrap: nowrap;
+}
+header nav ul li a::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+header nav ul li a:hover{
+    color: var(--primary-color);
+}
+header nav ul li a:hover::before{
+    width: 100%;
+}
+header nav ul li:hover ul{
+    display: flex;
+}
+header .buttons button{
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    position: relative;
+    z-index: 100;
+    transition: 0.3s;
+    cursor: pointer;
+}
+header .buttons button::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+header .buttons button:hover::before{
+    width: 100%;
+}
+header .buttons button:hover{
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero{
+    height: 90vh;
+    background-image: linear-gradient(#0000ff75, #0000ff75), url(img\ \(2\).jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .hero-text{
+    width: 900px;
+    text-align: center;
+}
+#hero .hero-text h1{
+    font-size: 90px;
+    font-family: bebas, fantasy;
+    letter-spacing: 10px;
+    line-height: 90px;
+    margin-bottom: 20px;
+}
+#hero .hero-text .hero-text-seperate{
+    color: var(--primary-color);
+}
+#hero .hero-text p{
+    font-family: myfont;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#hero .buttons button{
+    padding: 20px 40px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    position: relative;
+    z-index: 100;
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: myfont;
+}
+#hero .buttons button::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+#hero .buttons button:hover::before{
+    width: 100%;
+}
+#hero .buttons button:hover{
+    color: var(--primary-color);
+}
+
+#hero .hero-text-seperate::before{
+    content: "TRY TO ";
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: changeText 10s ease-in-out infinite;
+}
+
+@keyframes changeText{
+    40%{
+        content: 'EVER ';
+    }
+    70%{
+        content: 'YOU ';
+    }
+    90%{
+        content: 'JUST ';
+    }
+}
+
+
+/* About section */
+#about .about-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+}
+#about .about-div .about-image{
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+}
+#about .about-div .about-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+#about .about-div .about-image:hover img{
+    transform: scale(1.3);
+}
+#about .about-div .about-description{
+    width: 600px;
+}
+#about .about-div .about-description h1{
+    font-size: 60px;
+    font-family: Bebas, fantasy;
+    color: var(--primary-color);
+}
+#about .about-div .about-description p{
+    margin: 10px 0;
+    font-family: myfont;
+    color: var(--primary-color);
+}
+
+#about .about-div .about-description button{
+    padding: 20px 40px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    position: relative;
+    z-index: 100;
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: myfont;
+}
+#about .about-div .about-description button::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+#about .about-div .about-description button:hover::before{
+    width: 100%;
+}
+#about .about-div .about-description button:hover{
+    color: var(--secondary-color);
+}
